@@ -2,7 +2,6 @@
 #include <optional>
 #include <stdexcept>
 #include <string>
-#include <vector>
 
 class RefCellError : public std::runtime_error {
 public:
@@ -201,7 +200,7 @@ public:
     }
 };
 
-// Simple test main to ensure basic functionality
+#ifndef ONLINE_JUDGE
 int main() {
     try {
         RefCell<int> cell(42);
@@ -222,3 +221,4 @@ int main() {
     }
     return 0;
 }
+#endif
